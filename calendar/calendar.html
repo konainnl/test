@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>기념일 계산기</title>
+    <title>기념일</title>
     <style>
         * {
             color: #333333;
@@ -52,21 +52,21 @@
         <img id='jisook' src="jisook.jpeg" alt="jisook">-->
     </section>
     <div class='container d-flex flex-column justify-content-center align-items-center mt-3'>
-        <h3>두희♥지숙</h3>
+        <h3>Jin ♥ Gon</h3>
         <h3 id='love'>0일째</h3>
-        <h4 class="date">2020.6.30</h4>
+        <h4 class="date">2013.8.17</h4>
     </div>
     <hr/>
     <section class='special-day'>
-        <h3 class='title'>발렌타인 데이</h3>
+        <h3 class='title'>결혼기념일</h3>
         <div class='date-box'>
             <p id='valentine' class='days-left'>0일 남음</p>
-            <p class='date'>2021.2.14</p>
+            <p class='date'>2021.4.11</p>
         </div>
     </section>
     <hr/>
     <section class='special-day'>
-        <h3 class='title'>1000일</h3>
+        <h3 class='title'>3000일</h3>
         <div class='date-box'>
             <p id='thousand' class='days-left'>0일 남음</p>
             <p id='thousand-date' class='date'>0000.00.00</p>
@@ -79,7 +79,7 @@
   crossorigin="anonymous"></script>
     <script>
         var now = new Date();
-        var start = new Date('2020-06-30');
+        var start = new Date('2013-08-17');
 
         //우리 몇 일째?
         var timeDiff = now.getTime() - start.getTime();
@@ -87,13 +87,13 @@
         $('#love').text(day + '일째');
 
         //기념일까지 남은 날짜는?
-        var valentine = new Date('2021-02-14');
+        var valentine = new Date('2021-04-11');
         var timeDiff2 = valentine.getTime() - now.getTime();
         var day2 = Math.floor(timeDiff2 / (1000 * 60 * 60 * 24) + 1);
         $('#valentine').text(day2 + '일 남음');
 
         //천일은 언제인가?
-        var thousand = new Date(start.getTime() + 999 * (1000 * 60 * 60 * 24));
+        var thousand = new Date(start.getTime() + 2999 * (1000 * 60 * 60 * 24));
         var thousandDate = thousand.getFullYear() + '.' + (thousand.getMonth()+1) + '.' + thousand.getDate();
         $('#thousand-date').text(thousandDate);
 
